@@ -16,7 +16,7 @@ class Advanced :public BasicCar{
     }
 };
 
-// main methods start here ....
+// main methods start here ...
 int main(){
     //create the base class pointer and derived class object 
     BasicCar *ptr = new Advanced();
