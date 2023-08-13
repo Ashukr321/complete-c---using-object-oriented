@@ -20,5 +20,11 @@ int main()
     {
         cout << cars[i] << "\n";
     }
+    int s = sizeof(cars)/sizeof(string);// this will gives the 5 in output  
+
+    cout << s << endl;
     return 0;
 }
+
+// pointer is used to store the address of the data that  is store in the 
+// memory 
