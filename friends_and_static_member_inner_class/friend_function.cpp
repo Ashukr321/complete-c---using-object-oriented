@@ -25,7 +25,7 @@ void func(){
 
     t.c= 5;
 
-    
+
     cout<<t.a<<endl;
     cout<<t.b<<endl;
     cout<<t.c <<endl;
