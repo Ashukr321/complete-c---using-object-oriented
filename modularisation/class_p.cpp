@@ -6,7 +6,7 @@ class Rectangle {
     double length ; 
     double breadth ; 
 
-    public: 
+    public:       
 
     Rectangle(){
         this->length = 1.0;
@@ -25,14 +25,21 @@ class Rectangle {
     
     void setBreath(double length){
         this->breadth = breadth;  
-    }
+    }     
 
     //getter length 
-    int getLength(){
+    double getLength(){
         return length;
     }
-     int getBreath(){
+     double getBreath(){
         return breadth;
+    }
+
+    double area (){
+        return length*breadth;
+    }
+    double perimeter(){
+        return 2*(length+breadth);
     }
 
     ~Rectangle(){
@@ -42,11 +49,20 @@ class Rectangle {
 
 //🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️
 int main(){
+    double l, b;
+
+    cout<<"enter the value of length "<<endl;
+    cin>>l;
+    cout<<"\n enter the value of breath"<<endl;
+    cin >>b;
+    Rectangle obj1;
+
     //create the object of the clasw
-    Rectangle obj1(3,4);
-    obj1.setBreath(3);
-    obj1.setBreath(3);
-    cout<<"The area is "<<obj1.getLength()*obj1.getBreath()<<endl;
+    obj1.setBreath(b);
+    obj1.setLength(l);
+
+    cout<<"The area is "<<obj1.area()<<endl;
+    cout<<"The perimeter is "<<obj1.perimeter()<<endl;
     
     return 0; 
 }
