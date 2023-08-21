@@ -126,7 +126,7 @@ Node* insertAtithPos(Node *head, int i, int data){
         //create  the new node of the data
 
         Node *n = new Node(data);
-        
+
         Node *temp = head->next;
         head->next = n;
         n->next = temp;
@@ -135,8 +135,28 @@ Node* insertAtithPos(Node *head, int i, int data){
       return copyHead;
 }
 
-
-
+Node * delateIthNode(Node *head , int i ){
+    if(i<0){
+        return head;
+    }
+    if (i==0 &&head)
+    {
+        return head->next;
+    }
+    Node *temp = head; 
+    int cnt= 1;
+    while (cnt<=i-1&& temp !=NULL)
+    {
+        temp =temp->next;
+        cnt++;
+    }
+    if (temp)
+    {
+       temp->next = temp->next->next;
+       return head;
+    }
+    
+}
 // main method start here 
 int main(){
     //create the node 
