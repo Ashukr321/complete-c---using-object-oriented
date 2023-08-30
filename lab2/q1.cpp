@@ -1,21 +1,20 @@
 #include<iostream>
 using namespace std;
-
-//create the class 
 class Stock{
     string symbol;
     string stockName;
     double priviousPrice;
     double currentPrice;
-    public:
+    public: 
     //constructor 
-    Stock(string,string,double,double);
+    Stock(string symb,string name,double priviousPrice,double currentPrice);
     double getChangePercent();
 };
 
 // intitlisation of cass variables 
 Stock::Stock (string symb, string name , double priviousPrice, double currentPrice){
-   
+   this->symbol = symb;
+   this->stockName= name;
     this->priviousPrice = priviousPrice;
     this->currentPrice = currentPrice;
 }
@@ -42,6 +41,7 @@ int main(){
     cin>>currentPrice;
     cout<<"enter stock priviousPrice"<<endl;
     cin>>priviousPrice;
+
     //create the object of  the class 
     Stock obj(symb,name,priviousPrice,currentPrice);
 
