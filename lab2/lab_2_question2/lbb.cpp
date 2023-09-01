@@ -3,6 +3,7 @@ using namespace std;
 
 class Lbb
 {
+    
     int *arr;
     int n;
 
@@ -90,6 +91,7 @@ public:
 int main()
 {
 
+    
     int arr[] = {12, 4, 5, 6, 7, 8, 8};
     int size = sizeof(arr)/sizeof(int);
     Lbb ob(arr, size);
