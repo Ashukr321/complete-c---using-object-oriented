@@ -2,7 +2,6 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
-
 using namespace std;
 
 
@@ -15,5 +14,6 @@ int main(){
     int max  = *max_element(v.begin(),v.end());
     cout<< "The maximum value is "<<max <<endl ;    
     cout<< "The minimum value is "<<min<<endl ;    
+    
     return 0; 
 }
