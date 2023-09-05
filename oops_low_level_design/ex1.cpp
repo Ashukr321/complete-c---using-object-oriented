@@ -22,3 +22,7 @@ int main(){
     m1.sleep();
     return 0;
 }
+
+// public 
+// private 
+// protechted 
