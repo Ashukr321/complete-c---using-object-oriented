@@ -7,7 +7,7 @@ Stock::Stock (string symb, string name , double priviousPrice, double currentPri
 }
 
 double Stock::Stock::getChangePercent(){
-   double data  =  ( ( (this->currentPrice - this->priviousPrice) / this->currentPrice) )*100;
+   double data  =  ( abs( (this->currentPrice - this->priviousPrice) / this->currentPrice) )*100;
   
     //return data ;
     return data;

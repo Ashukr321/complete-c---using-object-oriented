@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+#include<math.h>
 class Stock{
     string symbol;
     string stockName;
@@ -20,7 +21,7 @@ Stock::Stock (string symb, string name , double priviousPrice, double currentPri
 }
 /* function to calculate change percent */
 double Stock :: getChangePercent(){
-   double data  =  ( ( (this->currentPrice - this->priviousPrice) / this->currentPrice) )*100;
+   double data  =  ( abs( (this->currentPrice - this->priviousPrice) / this->currentPrice) )*100;
   
     //return data ;
     return data;
