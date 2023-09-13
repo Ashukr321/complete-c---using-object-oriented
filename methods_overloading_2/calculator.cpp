@@ -7,8 +7,7 @@ using namespace std;
 class Calculator
 {
     // create the function and do overloading
-public: 
-    
+public:
     int add(int a, int b)
     {
 
@@ -24,8 +23,9 @@ public:
     {
         return a * b;
     }
-    int dMultiply(double a, double b){
-        return a*b;
+    int dMultiply(double a, double b)
+    {
+        return a * b;
     }
 };
 int main()
@@ -35,7 +35,6 @@ int main()
 
     cout << c.add(3, 4) << endl;
     cout << c.addDouble(34.34, 553.3) << endl;
-
 
     return 0;
 }
