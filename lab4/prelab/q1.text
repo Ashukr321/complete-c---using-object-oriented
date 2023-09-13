@@ -1,0 +1,24 @@
+
+ class diagramme  
+
++----------------------------------+
+|            MyInteger            |
++----------------------------------+
+|  - : int  value                    |
++----------------------------------+
+| + MyInteger(value: int)         |
+| + getValue(): int               |
+| + isEven(): bool                |
+| + isOdd(): bool                 |
+| + isPrime(): bool               |
+| + static isEven(int): bool      |
+| + static isOdd(int): bool       |
+| + static isPrime(int): bool     |
+| + static isEven(MyInteger): bool|
+| + static isOdd(MyInteger): bool |
+| + static isPrime(MyInteger): bool|
+| + equals(int): bool             |
+| + equals(MyInteger): bool       |
+| + static parseInt(char[]): int  |
+| + static parseInt(std::string): int|
++----------------------------------+
