@@ -26,7 +26,7 @@ class Calculator {
         this->b=b;
     };
 
-    int sum();
+   virtual int sum();
     int sub();
 };
 
@@ -40,11 +40,30 @@ int Calculator::sub(){
     return a-b;
 }
 
+
+// create the another class 
+class Mul : public Calculator{
+    
+    int a ;
+    int b ;
+    // create the constructor 
+    public:
+    Mul(int a, int b ){
+        this ->a = a;
+        this->b= b;
+    }
+    int sum()override{
+        return a+b;
+    }
+};
 int main()
 {
     // object crration 
     Calculator c1(34,45);
-    cout<<c1.sum() <<endl;// call to method sum
-    cout<<c1.sub()<<endl;
+    Mul m1(3,3);
+    // cout<<c1.sum() <<endl;// call to method sum
+    // cout<<c1.sub()<<endl;
+    cout<<m1.sum()<<endl;
+
     return 0;
 }

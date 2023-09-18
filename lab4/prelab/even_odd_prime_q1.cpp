@@ -15,6 +15,7 @@ public:
    MyInteger(){
 
    }
+
     MyInteger(int data)
     {
         this->value = data;
@@ -65,19 +66,70 @@ public:
         return true;
     }
 
-    // static  methods  + represent the public  access modifers 
-    // static memeber only access the static 
-     static bool isEven2(){
-        // to access the nonstatic data in the static function 
-        // we have to create the object of the class 
-        // MyInteger obj;
-        // if (obj.value%2==0){
-        //     return  true;
-        // }else{
-        //     return false;
-        // }
-     }
+    static bool isOdd()
+    {
+        MyInteger obj;
+
+        if (obj.value % 2 != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    static bool isEven2(){
+        //create the object of  the  class 
+        MyInteger obj;
+        if (obj.value % 2 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    static bool isPrime()
+
+    {
+        MyInteger obj;
+
+        for (int i = 2; i < obj.value; i++)
+        {
+            if (obj.value % 2 == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    bool equals(int n){
+        if (n==value)
+        {
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
+    bool equals(MyInteger){
+        if (MyInteger::value==value)
+        {
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    
 };
+
+
 
 // main methods start here
 int main()
@@ -87,6 +139,9 @@ int main()
     cin >> value;
     // create the object
     // MyInteger a(value);//   static class object  
-    MyInteger.isEven2();
+    cout<<MyInteger::isEven2()<<endl;
+    cout<<MyInteger::isOdd()<<endl;
+    cout<<MyInteger::isPrime()<<endl;
+
     return 0;
 }
