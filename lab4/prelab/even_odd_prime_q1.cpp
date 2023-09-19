@@ -156,7 +156,20 @@ public:
             return false;
         }
     }
+
+    //convert the  chracter array integer to integer 
+   static int parseInt (char num[] ){
+    int result =0  ; 
+
+    for (int i = 0; i< num[i]!='\0'; i++)
+    {
+        int digit =num[i]-'0';
+        result = result *10 +digit;
+    }
+        return result;
+    }
 };
+
 
 // main methods start here
 int main()
@@ -165,9 +178,16 @@ int main()
     cout << "enter your number " << endl;
     cin >> value;
 
+
+    char num[] ="123453245";
+   
     // create the object of the myInter class
     MyInteger obj(value);
     // calling all the methods
+
+    cout<<"return the  character to interger  "<<endl;
+    cout <<MyInteger::parseInt(num) << endl;
+
 
     cout << "calling instance methods" << endl;
     cout << obj.isEven() << endl;
@@ -198,6 +218,9 @@ int main()
     MyInteger obj3(n);
     cout<<obj.equals(obj3);
     cout<<endl;
+
+
+
     cout<<"thanku "<<endl;
     return 0;
 }

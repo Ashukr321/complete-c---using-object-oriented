@@ -105,7 +105,7 @@ public:
         if (ammount>=0)
         {
             this->balance=balance+ammount ; 
-           cout<<" money successfully deposit to your account"<<endl;
+           cout<<" money successfully deposit to your account"<<ammount<<endl;
             return true;
         }else{
             cout<< "invalid input" << endl;
@@ -147,9 +147,18 @@ int main()
     acc1.setAnnualInterestRate(4.5);
 
     //calling all the methods 
-    cout <<"your current balance is : "<<acc1.getBalance(); 
-    cout <<"your current balance is : "<<acc1.getMonthlyInterest(); 
-    cout <<"your current balance is : "<<acc1.(); 
+    // cout <<"your current balance is : "<<acc1.getId(); 
+    // cout <<"your current balance is : "<<acc1.getBalance(); 
+    // cout <<"your current balance is : "<<acc1.getAnnualInterest(); 
+
+    int money ;
+    cout<<"enter your money "<<endl;
+    cin>>money;
+    cout <<"deposite your money  "<< acc1.depostMoney(money);
+
+
+    
+
 
     return 0;
 }
