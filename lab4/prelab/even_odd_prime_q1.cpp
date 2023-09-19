@@ -10,7 +10,7 @@ private:
 
 public:
     // constructor
-   
+
     MyInteger(int data)
     {
         this->value = data;
@@ -157,19 +157,28 @@ public:
         }
     }
 
-    //convert the  chracter array integer to integer 
-   static int parseInt (char num[] ){
-    int result =0  ; 
-
-    for (int i = 0; i< num[i]!='\0'; i++)
+    // convert the  chracter array integer to integer
+    static int parseInt(char num[])
     {
-        int digit =num[i]-'0';
-        result = result *10 +digit;
-    }
+        int result = 0;
+
+        for (int i = 0; i < num[i] != '\0'; i++)
+        {
+            int digit = num[i] - '0';
+            result = result * 10 + digit;
+        }
         return result;
     }
-};
 
+    static long factorial(int n)
+    {
+
+        if (n > 1)
+            return n * factorial(n - 1);
+        else
+            return 1;
+    }
+};
 
 // main methods start here
 int main()
@@ -177,17 +186,14 @@ int main()
     int value;
     cout << "enter your number " << endl;
     cin >> value;
+    char num[] = "123453245";
 
-
-    char num[] ="123453245";
-   
     // create the object of the myInter class
     MyInteger obj(value);
     // calling all the methods
 
-    cout<<"return the  character to interger  "<<endl;
-    cout <<MyInteger::parseInt(num) << endl;
-
+    cout << "return the  character to interger  " << endl;
+    cout << MyInteger::parseInt(num) << endl;
 
     cout << "calling instance methods" << endl;
     cout << obj.isEven() << endl;
@@ -200,27 +206,33 @@ int main()
     cout << MyInteger::isOdd(4) << endl;
     cout << MyInteger::isPrime(5) << endl;
 
-    cout << "calling methods via a object as a  parameter "<<endl;
+    cout << "calling methods via a object as a  parameter " << endl;
 
     MyInteger obj2(5);
-    cout <<obj.isEven(obj2) << endl;
-    cout <<obj.isOdd(obj2) << endl;
-    cout <<obj.isPrime(obj2) << endl;
+    cout << obj.isEven(obj2) << endl;
+    cout << obj.isOdd(obj2) << endl;
+    cout << obj.isPrime(obj2) << endl;
 
-    cout<<"check the  passing your number is equals or not "<<endl;
-    int n ;
-    cout << "enter your number "<<endl;
-    cin>>n;
+    cout << "check the  passing your number is equals or not " << endl;
+    int n;
+    cout << "enter your number " << endl;
+    cin >> n;
 
-    cout<<obj.equals(n)<<endl;
-    
-    // create the object of value n 
+    cout << obj.equals(n) << endl;
+
+    // create the object of value n
     MyInteger obj3(n);
-    cout<<obj.equals(obj3);
-    cout<<endl;
+    cout << obj.equals(obj3);
+    cout << endl;
 
+    cout << "calculate the factorial of number"<<endl;
+    int n1 ; 
+    cin>>n1;
 
+    cout<<MyInteger::factorial(n1)<<endl;
+    
+    cout << "thanku " << endl;
 
-    cout<<"thanku "<<endl;
-    return 0;
+    
+    return 0; 
 }
