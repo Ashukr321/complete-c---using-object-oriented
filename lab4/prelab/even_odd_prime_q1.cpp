@@ -162,7 +162,7 @@ public:
 int main()
 {
     int value;
-    cout << "ente your number " << endl;
+    cout << "enter your number " << endl;
     cin >> value;
 
     // create the object of the myInter class
