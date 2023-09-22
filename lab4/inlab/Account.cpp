@@ -101,19 +101,31 @@ public:
     }
 
 
-    bool depostMoney (double ammount){
+    bool depositMoney (double ammount){
         if (ammount>=0)
         {
             this->balance=balance+ammount ; 
-           cout<<" money successfully deposit to your account"<<ammount<<endl;
+           cout<<" money successfully deposit to your account "<<ammount<<endl;
             return true;
         }else{
             cout<< "invalid input" << endl;
-            
+            return false;
         }
         
     }
+     bool withdrawMoney (double ammount){
+        if (ammount>=0)
+        {
+            this->balance=balance-ammount ; 
+           cout<<" money successfully withdraw to your account "<< ammount<<" \n total balance "<<balance<<endl;
+            return true;
+        }else{
+            cout<< "invalid input" << endl;
+            return false;
+        }
+    }
 
+    
     // getMonthly Interest 
     double getMonthlyInterest(){
         double monthlyInterestRate = annualInterestRate/12;
@@ -147,18 +159,24 @@ int main()
     acc1.setAnnualInterestRate(4.5);
 
     //calling all the methods 
-    // cout <<"your current balance is : "<<acc1.getId(); 
-    // cout <<"your current balance is : "<<acc1.getBalance(); 
-    // cout <<"your current balance is : "<<acc1.getAnnualInterest(); 
+    cout <<"your accoint id  is : "<<acc1.getId()<<endl;
+    cout <<"your current balance is : "<<acc1.getBalance()<<endl;
+
 
     int money ;
-    cout<<"enter your money "<<endl;
+    cout<<"enter your deposit money "<<endl;
     cin>>money;
-    cout <<"deposite your money  "<< acc1.depostMoney(money);
+    cout <<"deposite your money  "<< acc1.depositMoney(money)<<endl;
 
 
-    
 
+    cout<<"withdraw money"<<endl<<endl;
+    int money1 ; 
+    cout<<"enter your money that you want to withdraw"<<endl<<endl;
+    cin >> money1;
+    cout <<"withdraw your money  "<< acc1.withdrawMoney(money1)<<endl;
+
+    cout<<"your monthly inerest  interest"<<acc1.getMonthlyInterest()<<endl;
 
     return 0;
 }
