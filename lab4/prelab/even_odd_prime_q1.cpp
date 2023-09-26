@@ -157,6 +157,8 @@ public:
         }
     }
 
+
+
     // convert the  chracter array integer to integer
     static int parseInt(char num[])
     {
@@ -165,10 +167,11 @@ public:
         for (int i = 0; i < num[i] != '\0'; i++)
         {
             int digit = num[i] - '0';
-            result = result * 10 + digit;
+            result = (result * 10) + digit;
         }
         return result;
     }
+
 
     static long factorial(int n)
     {
@@ -179,6 +182,9 @@ public:
             return 1;
     }
 };
+
+
+
 
 // main methods start here
 int main()
@@ -235,4 +241,5 @@ int main()
 
     
     return 0; 
+
 }
