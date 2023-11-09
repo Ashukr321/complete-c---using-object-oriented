@@ -16,7 +16,7 @@ int main()
     else
     {
       throw(b);
-    }
+    }x
   }
   // catch (int b)
   // {
@@ -29,7 +29,8 @@ int main()
   // ... this catch  all the exception of the programme 
   catch (...)
   {
-    cout << "somthing went wrong" << endl;
+    cout << "somthing went wrong" << endl; 
   }
+                                                                                                                              
   return 0;
 }
