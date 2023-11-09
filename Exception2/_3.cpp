@@ -18,14 +18,18 @@ int main()
       throw(b);
     }
   }
-  catch (int b)
+  // catch (int b)
+  // {
+  //   cout << "we can't devide the number by the zero :" << b << endl;
+  // }
+  // catch (char b)
+  // {
+  //   cout << "plz enter the valid input " << endl;
+  // }
+  // ... this catch  all the exception of the programme 
+  catch (...)
   {
-    cout << "we can't devide the number by the zero :" << b << endl;
+    cout << "somthing went wrong" << endl;
   }
-  catch (char b)
-  {
-    cout << "plz enter the valid input " << endl;
-  }
-
   return 0;
 }
