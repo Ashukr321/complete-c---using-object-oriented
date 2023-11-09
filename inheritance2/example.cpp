@@ -30,8 +30,8 @@ int main(){
 // inheritance 
 // inherit the parent properties in to the child  class : 
 // type of the inheritance 
-// simple inheritance 
-// multiple inheritance
+// simple inheritance   completed 
+// multiple inheritance 
 // hierarchical inheritance
 // hybrid inheritance
 // multilevel inheritance
