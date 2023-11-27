@@ -20,3 +20,6 @@
     // forward
     // bidirection 
     // random 
+
+// stl -> contauner  algorithms  iterator 
+
