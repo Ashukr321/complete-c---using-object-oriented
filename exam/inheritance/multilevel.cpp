@@ -168,11 +168,8 @@
 //   obj2.Animal();
 //   obj2.cat();
 
-
 //   obj3.Animal();
 //   obj3.cow();
-
-  
 
 //   return 0;
 // }
