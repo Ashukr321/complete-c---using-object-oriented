@@ -12,6 +12,7 @@ class Amity{
   public:
     Amity(){
        cout<<" amity university patna";
+   
     }
     Amity(int a){
        cout<<a;
@@ -33,15 +34,15 @@ void Amity::func1(){
 
 // main methods 
 int main(){
-  // // object 
-  // Amity obj1;
-  // cout<<endl;
+  // object 
+  Amity obj1;
+  cout<<endl;
     
-  // Amity obj2(12);
-  // cout<<endl;
+  Amity obj2(12);
+  cout<<endl;
   
-  // // obj1.data();
-  // Amity::data();
+  // obj1.data();
+  Amity::data();
   
   Amity::func1();
   return 0;
