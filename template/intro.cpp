@@ -24,21 +24,22 @@
 //   return 0; 
 // }
 
-#include<iostream>
-using namespace std;
-template <class T>
-class Vector {
-  public:
-  T size;
-  T vect[n];
-  // create the constructor 
-  Vector(T n ){
-    this->size = n;
-    
-  }
-};
-int main() {
-  Vector<int>vect1(4);
- 
-  
-}
+// template allow to programmer to write function and class tobe defined with  any type 
+// or genearl types 
+// it hlep in dry principle 
+// don't repeat yourself 
+
+// tempalte -> function template 
+// class templates 
+// like normal function we can overload   the template function 
+// use of template 
+// tmeplate are use to implement the  stl 
+// structure template libary 
+// container 
+// algorithms  
+// iterator  use to iterate the contianer element 
+// iterator is just a simple pointer 
+// container -> vector , stack , queue , map , hash , set, list ,etc 
+// algorithms  have too many function 
+// template are use to create the abstaract data  types 
+// 
