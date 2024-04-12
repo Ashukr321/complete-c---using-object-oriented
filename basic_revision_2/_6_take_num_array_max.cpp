@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 int maxElment(int arr[], int size)
 {
   int max = arr[0];
@@ -14,6 +15,8 @@ int maxElment(int arr[], int size)
   }
   return max;
 }
+
+
 // main start here ...
 int main()
 {
@@ -30,6 +33,6 @@ int main()
 
   int max = maxElment(arr, size);
   cout << "maximum element of the array :" << max << endl;
-
   return 0;
+ 
 }
